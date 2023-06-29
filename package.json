@@ -1,0 +1,20 @@
+{
+  "name": "showcase-me",
+  "version": "1.0.0",
+  "description": "A simple app to display a short description about me and all my online profile links",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-client": "cd client && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coding-class-home/showcase-me.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coding-class-home/showcase-me/issues"
+  },
+  "homepage": "https://github.com/coding-class-home/showcase-me#readme"
+}
