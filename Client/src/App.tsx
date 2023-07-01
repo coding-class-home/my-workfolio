@@ -1,10 +1,18 @@
 import React from 'react';
 import './App.css';
+import CheckboxComponent from "./common/Checkbox";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+
+        <CheckboxComponent
+          color="secondary"
+          label="yinke"
+          value="Yinke"
+        />
+
         <h1>Showcase Me</h1>
         <h2>Showcase Me</h2>
         <h3>Showcase Me</h3>
