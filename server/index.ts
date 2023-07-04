@@ -1,15 +1,29 @@
-import express, { Express, Request, Response } from 'express';
-import dotenv from 'dotenv';
+const express = require("express");
+const { graphqlHTTP } = require("express-graphql");
+const { buildSchema } = require("graphql");
 
-dotenv.config();
+// Construct a schema, using GraphQL schema language
+const schema = buildSchema(`
+  type Query {
+    hello: String
+  }
+`);
 
-const app: Express = express();
-const port = process.env.PORT || 3001;
+// The root provides a resolver function for each API endpoint
+const root = {
+  hello: () => {
+    return "Hello world!";
+  },
+};
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('Showcase me server');
-});
-
-app.listen(port, () => {
-  console.log(`⚡️[server]: Server is running at http://localhost:${port}`);
-});
+const app = express();
+app.use(
+  "/graphql",
+  graphqlHTTP({
+    schema: schema,
+    rootValue: root,
+    graphiql: true,
+  })
+);
+app.listen(4000);
+console.log("Running a GraphQL API server at http://localhost:4000/graphql");
