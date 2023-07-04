@@ -3,9 +3,16 @@
   "version": "1.0.0",
   "description": "A simple app to display a short description about me and all my online profile links",
   "main": "index.js",
+<<<<<<< HEAD
+  "type": "module",
+  "scripts": {
+    "compile": "tsc",
+    "start": "npm run compile && node ./dist/index.js"
+=======
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-client": "cd client && npm start"
+>>>>>>> main
   },
   "repository": {
     "type": "git",
@@ -16,5 +23,18 @@
   "bugs": {
     "url": "https://github.com/coding-class-home/showcase-me/issues"
   },
+<<<<<<< HEAD
+  "homepage": "https://github.com/coding-class-home/showcase-me#readme",
+  "dependencies": {
+    "@apollo/server": "^4.7.4",
+    "graphql": "^16.7.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.1",
+    "typescript": "^5.1.3"
+  }
+}
+=======
   "homepage": "https://github.com/coding-class-home/showcase-me#readme"
 }
+>>>>>>> main
